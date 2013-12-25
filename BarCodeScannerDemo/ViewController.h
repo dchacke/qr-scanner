@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ZBarReaderDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *resultTextView;
+@property (weak, nonatomic) IBOutlet UIImageView *resultImageView;
+
+- (IBAction)startScanning:(id)sender;
 
 @end
